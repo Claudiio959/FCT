@@ -22,8 +22,8 @@ namespace integrado.Models
         public string Usuarionombre { get; set; }
     }
     public class UsuarioDTO
-        {
-        public UsuarioDTO(string usuariouser,string usuarionombre)
+    {
+        public UsuarioDTO(string usuariouser, string usuarionombre)
         {
             Usuariouser = usuariouser;
             Usuarionombre = usuarionombre;

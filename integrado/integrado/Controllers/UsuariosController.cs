@@ -14,7 +14,7 @@ namespace integrado.Controllers
         public IEnumerable<UsuarioDTO> Get()
         {
             var repo = new UsuariosRepository();
-           List<UsuarioDTO> usuarios = repo.RetrieveDTO();
+            List<UsuarioDTO> usuarios = repo.RetrieveDTO();
             return usuarios;
         }
 
