@@ -1,0 +1,85 @@
+{
+  "usuaris": [
+    {
+      "id": 1,
+      "userName": "mviel2",
+      "contrasenya": "adios",
+      "nom": "Manel2"
+    },
+    {
+      "idUsu": 2,
+      "userName": "jofrna",
+      "contrasenya": "hola",
+      "nom": "Jonh"
+    },
+    {
+      "id": 3,
+      "userName": "dasda",
+      "contrasenya": "asdasd",
+      "nom": "dasdad"
+    },
+    {
+      "id": 4,
+      "userName": "hector",
+      "contrasenya": "dasdasd",
+      "nom": "adsad"
+    },
+    {
+      "id": "5",
+      "userName": "dsdad",
+      "contrasenya": "897878",
+      "nom": "kaka"
+    },
+    {
+      "id": "6",
+      "userName": "claudio",
+      "contrasenya": "atentoschavales",
+      "nom": "claudio"
+    },
+    {
+      "id": "7",
+      "userName": "pedro",
+      "contrasenya": "garcia",
+      "nom": "pedrito"
+    },
+    {
+      "userName": "raullet",
+      "contrasenya": "passraul",
+      "nom": "raul",
+      "id": "M1xH4-0"
+    },
+    {
+      "userName": "pedrito",
+      "contrasenya": "passpedro",
+      "nom": "pedro",
+      "id": "I3LulcA"
+    }
+  ],
+  "elements": [
+    {
+      "id": 1,
+      "nom": "fanta",
+      "descripcio": "naranjat"
+    },
+    {
+      "id": 2,
+      "nom": "papas",
+      "descripcio": "saladas"
+    },
+    {
+      "id": 3,
+      "nom": "Arròs",
+      "descripcio": "Aliment bàsic"
+    },
+    {
+      "id": 4,
+      "nom": "Fruïta",
+      "descripcio": "Imprescindible a la dieta Mediterrània"
+    },
+    {
+      "id": 6,
+      "nom": "Pa",
+      "descripcio": "Del Forn!!!"
+    }
+  ]
+}

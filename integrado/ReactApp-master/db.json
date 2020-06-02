@@ -1,0 +1,97 @@
+{
+  "usuaris": [
+    {
+      "id": 1,
+      "userName": "antonio",
+      "contrasenya": "antonio",
+      "nom": "antonio"
+    },
+    {
+      "idUsu": 2,
+      "userName": "joel",
+      "contrasenya": "hola",
+      "nom": "joel"
+    },
+    {
+      "id": 3,
+      "userName": "dasda",
+      "contrasenya": "asdasd",
+      "nom": "dasdad"
+    },
+    {
+      "id": 4,
+      "userName": "xixi",
+      "contrasenya": "dasdasd",
+      "nom": "adsad"
+    },
+    {
+      "id": "5",
+      "userName": "dsdad",
+      "contrasenya": "dsdad",
+      "nom": "dsdad"
+    },
+    {
+      "id": "6",
+      "userName": "claudio",
+      "contrasenya": "claudio",
+      "nom": "claudio"
+    },
+    {
+      "id": "7",
+      "userName": "pedro",
+      "contrasenya": "garcia",
+      "nom": "pedrito"
+    },
+    {
+      "userName": "alu",
+      "contrasenya": "alu",
+      "nom": "alu",
+      "id": "M1xH4-0"
+    },
+    {
+      "userName": "pedrito",
+      "contrasenya": "passpedro",
+      "nom": "pedro",
+      "id": "I3LulcA"
+    },
+    {
+      "userName": "chuchu",
+      "contrasenya": "chuchu",
+      "nom": "chuchu",
+      "id": "wLbEMb4"
+    },
+    {
+      "userName": "rayo",
+      "contrasenya": "rayoa",
+      "nom": "rayo",
+      "id": "tSHJhIQ"
+    }
+  ],
+  "elements": [
+    {
+      "id": 3,
+      "nom": "lili",
+      "descripcio": "pui"
+    },
+    {
+      "nom": "coca",
+      "descripcio": "mememe",
+      "id": 7
+    },
+    {
+      "nom": "mie",
+      "descripcio": "dtujj",
+      "id": 8
+    },
+    {
+      "nom": "wacho",
+      "descripcio": "wachin",
+      "id": 9
+    },
+    {
+      "nom": "pfff",
+      "descripcio": "omg",
+      "id": 10
+    }
+  ]
+}
