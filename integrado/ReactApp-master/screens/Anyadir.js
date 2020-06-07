@@ -30,7 +30,7 @@ render()
           
         <View>
             
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2}}
+            <TextInput style = {styles.arriba}
               placeholder='Nombre'
               placeholderTextColor='#000000'
               maxLength = {32}
@@ -40,7 +40,7 @@ render()
               >
             </TextInput>
             
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2}}
+            <TextInput style = {styles.arriba}
               placeholder='Descripción'
               placeholderTextColor='#000000'
               keyboardType={"default"}
@@ -48,13 +48,15 @@ render()
               value={this.state.edescripcio}
               >
             </TextInput>
-            <TouchableOpacity style ={styles.boton}  onPress={()=> ((this.elePost(this.state.eid, this.state.enom, this.state.edescripcio)))}>
+            <View>
+            <TouchableOpacity style ={styles.viewboton}  onPress={()=> ((this.elePost(this.state.eid, this.state.enom, this.state.edescripcio)))}>
                         <Text style={styles.textboton}>Añadir</Text>       
             </TouchableOpacity> 
 
-            <TouchableOpacity style ={styles.boton} onPress={()=> (this.props.navigation.navigate('Inicio'))}>
+            <TouchableOpacity style ={styles.viewboton} onPress={()=> (this.props.navigation.navigate('Inicio'))}>
                     <Text style={styles.textboton}>Atrás</Text>       
             </TouchableOpacity>
+            </View>
         </View>    
       </View>
     );
@@ -73,7 +75,7 @@ elePost(eid, enom, edescripcio)
   };
 
   fetch(url, {
-    method: 'PUT',
+    method: 'POST',
     credentials: 'same-origin',
     mode: 'same-origin',
     body: JSON.stringify(data),
@@ -109,12 +111,38 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'stretch',
+    backgroundColor: '#5E5151',
   },
+
   comptador: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  viewboton: {
+    height:40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft:75,
+    marginTop:200,
+    marginBottom:-150,
+    width:250,
+    height:45,
+    borderRadius:30,
+    alignItems:'center',
+    borderBottomColor: 'white',
+    backgroundColor: '#000000',
+  },
+  arriba:{
+    borderWidth:2,
+    backgroundColor:'white',
+    borderRadius:42,
+    marginTop:50,
+    alignItems:'center',
+    textAlign:'center',
+    fontSize:17,
   },
   fonsTot: {
     flex: 10, 

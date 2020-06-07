@@ -33,9 +33,8 @@ render()
         
       <View style = {styles.container}> 
           
-        <View>
-            <Text>id {JSON.stringify(navigation.getParam('eid'))}</Text>
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2}}
+          <View> 
+            <TextInput style = {styles.arriba}
               placeholder='Nombre'
               placeholderTextColor='#000000'
               maxLength = {32}
@@ -45,7 +44,7 @@ render()
               >
             </TextInput>
             
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2}}
+            <TextInput style = {styles.arriba}
               placeholder='Descripción'
               placeholderTextColor='#000000'
               keyboardType={"default"}
@@ -53,11 +52,12 @@ render()
               value={this.state.edescripcion}
               >
             </TextInput>
-            
-            <TouchableOpacity style ={styles.boton} onPress={()=> ((this.updateEle(navigation.getParam('eid'), this.state.enom, this.state.edescripcio)))}>
+            </View>
+            <View style>
+            <TouchableOpacity style ={styles.viewboton} onPress={()=> ((this.updateEle(navigation.getParam('eid'), this.state.enom, this.state.edescripcio)))}>
                     <Text style = {styles.textBoton}>Cambiar</Text>       
             </TouchableOpacity>
-            <TouchableOpacity style ={styles.boton} onPress={()=> (this.props.navigation.navigate('Inicio'))}>
+            <TouchableOpacity style ={styles.viewboton} onPress={()=> (this.props.navigation.navigate('Inicio'))}>
                     <Text style = {styles.textBoton}>Atrás</Text>       
             </TouchableOpacity>
         </View>    
@@ -120,6 +120,31 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'stretch',
+    backgroundColor: '#5E5151',
+  },
+  arriba:{
+    borderWidth:2,
+    backgroundColor:'white',
+    borderRadius:42,
+    marginTop:50,
+    alignItems:'center',
+    textAlign:'center',
+    fontSize:17,
+  },
+
+  viewboton: {
+    height:40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:50,
+    marginLeft:75,
+    width:250,
+    height:45,
+    borderRadius:30,
+    alignItems:'center',
+    borderBottomColor: 'white',
+    backgroundColor: '#000000',
   },
  
   comptador: {
@@ -149,6 +174,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     color: "#FFFFFF",
+    alignItems:"center",
   },
   componentEstil:{
     flex: 3,
@@ -157,11 +183,5 @@ const styles = StyleSheet.create({
   textBoton:{
     color:"#FFFFFF",
     textAlign:"center",
-  },
-  boton:{
-    backgroundColor: "#000000",
-    color:"#FFFFFF",
-    borderWidth: 3,
-    padding: 10,
   },
 });

@@ -71,6 +71,7 @@ export default class Login extends Component {
             <TextInput style={styles.titu}
               placeholder="REMEMBERTHAT"
               placeholderTextColor='#FFFFFF'
+              editable={false}
               />
         <View style={styles.inputContainer}>
         
@@ -95,7 +96,7 @@ export default class Login extends Component {
           <Text style={styles.loginText}>Iniciar sesión</Text>
         </TouchableHighlight>
 
-        <TouchableHighlight style={[styles.buttonContainer, styles.registerButton]}
+        <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]}
           onPress={() => navigate('Registro')}>
           <Text style={styles.registerText}>Registrarse</Text>
         </TouchableHighlight>
@@ -119,7 +120,8 @@ const styles = StyleSheet.create({
       borderBottomWidth: 1,
       width:250,
       height:45,
-      marginBottom:20,
+      marginBottom:40,
+      paddingBottom:10,
       flexDirection: 'row',
       alignItems:'center'
   },
@@ -130,7 +132,7 @@ const styles = StyleSheet.create({
       flex:1,
       textAlign: 'center',
       fontWeight: 'bold',
-      fontSize: 17,
+      fontSize: 16,
  
   },
   inputIcon:{
@@ -158,12 +160,6 @@ const styles = StyleSheet.create({
     borderRadius:30,
   },
   loginButton: {
-    backgroundColor: "#000000",
-    borderRightWidth: 5,
-    borderLeftWidth: 5,
-    color:'#daf87d',
-  },
-  registerButton: {
     backgroundColor: "#000000",
     borderRightWidth: 5,
     borderLeftWidth: 5,

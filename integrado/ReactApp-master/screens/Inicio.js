@@ -14,7 +14,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props)
     this.state ={
-      documentJSON: undefined,
+      documentJSON: [],
       datos: [],
       //name:this.props.navigation.getParam(name, undefined)
       
@@ -71,7 +71,7 @@ render()
           
         <View>
             <Text style = {styles.textHeader}>
-                Bienvenido {JSON.stringify(navigation.getParam('name'))}
+                Bienvenido: {JSON.stringify(navigation.getParam('name'))}
             </Text>
         </View> 
         <View style = {styles.container}>
@@ -82,22 +82,24 @@ render()
             renderItem = {({item}) => 
             <View>  
                 <Text style = {styles.textList}>{"Nombre: "}{item.nom}{"\n"}{"Descripción: "}{item.descripcio}{"\n"} </Text>
-                <TouchableOpacity style ={styles.boton} onPress={()=> ((this.deleteEle(item.id)))}>
-                    <Text style = {styles.textBoton}>Borrar</Text>       
-                </TouchableOpacity>
-                
+
                 <TouchableOpacity style ={styles.boton} onPress={()=> (this.props.navigation.navigate('Actualizar',{eid:item.id,onGoBack: () =>window.location.reload(false)}))}>
-                    <Text style = {styles.textBoton}>Cambiar</Text>       
+                    <Text style = {styles.textBoton1}>Cambiar</Text>       
                 </TouchableOpacity>
-  
-                
+
+                <TouchableOpacity style ={styles.boton} onPress={()=> ((this.deleteEle(item.id)))}>
+                    <Text style = {styles.textBoton1}>Borrar</Text>       
+                </TouchableOpacity> 
             </View>}/>
 
         </View>
         <View>
-          <TouchableOpacity style ={styles.boton} onPress={()=> (this.props.navigation.navigate('Anyadir'))}>
+          <TouchableOpacity style ={styles.bajo} onPress={()=> (this.props.navigation.navigate('Anyadir'))}>
                     <Text style = {styles.textBoton}>Añadir lista</Text>       
           </TouchableOpacity> 
+          <TouchableOpacity style ={styles.bajo} onPress={()=> (this.props.navigation.navigate('Login'))}>
+                    <Text style = {styles.textBoton}>Atrás</Text>    
+                    </TouchableOpacity>
           
         </View>
       </View>
@@ -200,6 +202,13 @@ deleteEle(eid)
   })
 
     .then((respuesta) => {
+      let fori = JSON.parse(this.state.datos);
+      fori=fori.filter(item=>item.id != eid)
+      
+      this.setState({
+        datos:fori
+      })
+
       if (respuesta.ok) {
         return respuesta.json();
 
@@ -230,16 +239,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#DCDCDC',
+    backgroundColor: '#5E5151',
+    color:'white',
   },
-  comptador: {
-    flex: 1,
+  bajo:{
+    height:40,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  fonsTot: {
-    flex: 10, 
+    marginBottom:9,
+    width:250,
+    height:45,
+    borderRadius:30,
+    alignItems:"center",
+    borderBottomColor: 'white',
+    backgroundColor: '#000000',
   },
   cap: {
     flex: 1,
@@ -264,22 +278,30 @@ const styles = StyleSheet.create({
     backgroundColor:"#ffffff"
   },
   boton:{
-    backgroundColor: "#000000",
+    backgroundColor: "#ffffff",
     borderWidth: 3,
     padding: 10,
+    color:'black',
+    
   },
   textBoton:{
     color:"#ffffff",
     textAlign:"center",
   },
+  textBoton1:{
+    color:"#000000",
+    textAlign:"center",
+  },
   textHeader:{
     textAlign: "center",
     fontSize: 40,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color:'white',
   },
   textList:{
     fontSize: 16,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color:'white',
   },
   
   

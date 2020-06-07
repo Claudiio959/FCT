@@ -24,8 +24,8 @@ export default class Register extends Component {
       const {navigate} = this.props.navigation;
       return (
         <View style={styles.fonsTot}>
-          <View>
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2,backgroundColor:'white',}}
+          <View style={styles.arriba}>
+            <TextInput style = {styles.botonera}
               placeholder='Nombre de usuario'
               placeholderTextColor='#000000'
               maxLength = {10}
@@ -34,16 +34,17 @@ export default class Register extends Component {
               value={this.state.uuserName}
               >
             </TextInput>
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2,backgroundColor:'white',}}
+            <TextInput style = {styles.botonera}
               placeholder='Contraseña'
               placeholderTextColor='#000000'
               maxLength = {10}
+              secureTextEntry={true}
               keyboardType={"Contraseña"}
               onChangeText={(value) => this.setState({ucontrasenya: value})}
               value={this.state.ucontrasenya}
               >
             </TextInput>
-            <TextInput style = {{underlinedColorAndroid: 'blue', borderWidth:2,backgroundColor:'white',}}
+            <TextInput style = {styles.botonera}
               placeholder='Nombre'
               placeholderTextColor='#000000'
               maxLength = {10}
@@ -53,7 +54,7 @@ export default class Register extends Component {
               >
             </TextInput>
           </View>
-          <View>
+          <View style={styles.bajo}>
           <TouchableOpacity style ={styles.boton} onPress={()=> ((this.usuPost(this.state.uid, this.state.uuserName, this.state.ucontrasenya, this.state.unom)))}>
                     <Text style = {styles.textoBoton}>Aplicar</Text>       
           </TouchableOpacity> 
@@ -114,7 +115,28 @@ const styles = StyleSheet.create({
       flex: 1,
       borderWidth: 3,
       borderRadius: 3,
-      backgroundColor:"#ffffff"
+      backgroundColor:"#ffffff",
+      alignItems: 'center',
+    },
+    arriba:{
+      marginTop:30,
+    },
+    botonera:{
+       borderWidth:2,
+       height:45,
+       flexDirection: 'row',
+       justifyContent: 'center',
+       alignItems: 'center',
+       marginBottom:20,
+       width:250,
+       marginTop:10,
+       borderRadius:30,
+       alignItems:"center",
+       borderBottomColor: 'black',
+       backgroundColor: '#ffffff',
+       marginLeft:80,
+       textAlign:"center",
+       fontSize:16,
     },
     textoBoton:
     {
@@ -138,10 +160,23 @@ const styles = StyleSheet.create({
       flex: 3,
       backgroundColor:"#ffffff"
     },
+    bajo:{
+      marginTop:120,
+    },
     boton:{
-      backgroundColor: "#000000",
-      borderWidth: 3,
-      padding: 10,
+      height:45,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom:10,
+      marginTop:12,
+      width:250,
+      borderRadius:30,
+      alignItems:"center",
+      borderBottomColor: 'white',
+      backgroundColor: '#000000',
+      marginLeft:80,
+      fontSize: 16,
     },
     
   
